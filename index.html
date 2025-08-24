@@ -1,24 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trexterity (TCK) Law - Expert Legal Guidance</title>
-    <meta name="description" content="Expert legal guidance in corporate law, intellectual property protection, and contract negotiation. Your trusted partners at Trexterity (TCK) Law." />
-    <meta name="author" content="Trexterity (TCK) Law" />
-
-    <meta property="og:title" content="Trexterity (TCK) Law - Expert Legal Guidance" />
-    <meta property="og:description" content="Expert legal guidance in corporate law, intellectual property protection, and contract negotiation. Your trusted partners at Trexterity (TCK) Law." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
-
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <meta name="description" content="Expert legal guidance in corporate law, intellectual property protection, and contract negotiation. Your trusted partners at Trexterity (TCK) Law.">
+    <meta name="author" content="Trexterity (TCK) Law">
+    
+    <meta property="og:title" content="Trexterity (TCK) Law - Expert Legal Guidance">
+    <meta property="og:description" content="Expert legal guidance in corporate law, intellectual property protection, and contract negotiation. Your trusted partners at Trexterity (TCK) Law.">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Mobile Sidebar Checkbox (Hidden) -->
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+    
+    <!-- Mobile Sidebar Overlay -->
+    <div class="sidebar-overlay"></div>
+    
+    <!-- Mobile Sidebar -->
+    <aside class="mobile-sidebar">
+        <nav class="sidebar-nav">
+            <a href="#hero" class="sidebar-link">Home</a>
+            <a href="#about" class="sidebar-link">About</a>
+            <a href="#services" class="sidebar-link">Services</a>
+            <a href="#team" class="sidebar-link">Team</a>
+            <a href="#contact" class="sidebar-link">Contact</a>
+        </nav>
+    </aside>
+    
+    <!-- Desktop Header -->
+    <header class="desktop-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">TREXTERITY (TCK) LAW</h1>
+                
+                <nav class="desktop-nav">
+                    <a href="#hero" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#team" class="nav-link">Team</a>
+                    <a href="#contact" class="contact-btn">CONTACT</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <label for="sidebar-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <span class="mobile-logo">Legal Firm</span>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="container">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Expert legal guidance</h1>
+                        <p class="hero-subtitle">Your trusted partner in corporate law, dispute resolution</p>
+                        <a href="#services" class="hero-btn">VIEW SERVICES</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p class="section-label">YOUR LEGAL ALLIES</p>
+                        <h2 class="section-title">Expertise in corporate law</h2>
+                        <div class="about-description">
+                            <p>
+                                At Trexterity (TCK) Law, we are a dedicated team of 
+                                three partners, committed to providing exceptional 
+                                legal services in corporate law, intellectual property 
+                                protection, and contract negotiation. Our expertise 
+                                ensures that your business navigates the complex legal 
+                                landscape with confidence.
+                            </p>
+                            <p>
+                                We understand the unique challenges you face and strive to deliver tailored 
+                                solutions that align with your goals. Trust us to be your 
+                                reliable partners in achieving success.
+                            </p>
+                        </div>
+                        <a href="#contact" class="link-btn">Get in touch</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="src/assets/legal-scales.jpg" alt="Legal scales and gavel representing justice and law">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">EXPERT LEGAL GUIDANCE</p>
+                    <h2 class="section-title">Navigating corporate law & IP protection</h2>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="src/assets/corporate-law.jpg" alt="Corporate law documents and legal consultation">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3 class="service-title">Corporate law</h3>
+                                <svg class="chevron-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </div>
+                            <p class="service-description">Expert guidance on corporate legal matters.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="src/assets/ip-protection.jpg" alt="Intellectual property protection and patent documentation">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3 class="service-title">Intellectual property protection</h3>
+                                <svg class="chevron-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </div>
+                            <p class="service-description">Safeguarding your innovative ideas and creations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="src/assets/contract-negotiation.jpg" alt="Contract negotiation and legal document review">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3 class="service-title">Contract negotiation</h3>
+                                <svg class="chevron-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </div>
+                            <p class="service-description">Mastering the art of effective contract negotiation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Team Section -->
+        <section id="team" class="team-section">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">OUR LEGAL EXPERTS</p>
+                    <h2 class="section-title">Dedicated to your success</h2>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="src/assets/corporate-law.jpg" alt="TRS - Dispute Resolution Partner">
+                        </div>
+                        <div class="team-content">
+                            <div class="team-info">
+                                <h3 class="team-name">TRS</h3>
+                                <p class="team-role">Dispute Resolution Partner</p>
+                            </div>
+                            <p class="team-description">John is a seasoned corporate law partner with a focus on strategic litigation and dispute resolution.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="src/assets/corporate-law.jpg" alt="CG - Litigation Partner">
+                        </div>
+                        <div class="team-content">
+                            <div class="team-info">
+                                <h3 class="team-name">CG</h3>
+                                <p class="team-role">Litigation Partner</p>
+                            </div>
+                            <p class="team-description">C is an litigation property expert dedicated to protecting clients' innovative assets and intellectual property rights.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="src/assets/corporate-law.jpg" alt="KD - Contract Negotiation Partner">
+                        </div>
+                        <div class="team-content">
+                            <div class="team-info">
+                                <h3 class="team-name">KD</h3>
+                                <p class="team-role">Contract Negotiation Partner</p>
+                            </div>
+                            <p class="team-description">K is a contract negotiation specialist with extensive experience in complex commercial agreements and deal structuring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <h2 class="contact-title">We're here to assist you!</h2>
+                        
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name <span class="required">*</span></label>
+                                <input type="text" id="name" class="form-input" placeholder="Jane Smith">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email address <span class="required">*</span></label>
+                                <input type="email" id="email" class="form-input" placeholder="email@website.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone number <span class="required">*</span></label>
+                                <input type="tel" id="phone" class="form-input" placeholder="555-555-5555">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" class="form-textarea" rows="5"></textarea>
+                            </div>
+                            
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="consent" class="checkbox">
+                                <label for="consent" class="checkbox-label">
+                                    I allow this website to store my submission so 
+                                    they can respond to my inquiry. <span class="required">*</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="form-submit">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-section-info">
+                            <h3 class="info-title">Get in touch</h3>
+                            <div class="info-item">
+                                <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <a href="mailto:xyz@trexteritylaw.com" class="info-link">xyz@trexteritylaw.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-section-info">
+                            <h3 class="info-title">Location</h3>
+                            <div class="info-item">
+                                <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="info-text">Guwahati, AS IN</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-section-info">
+                            <h3 class="info-title">Hours</h3>
+                            <div class="hours-list">
+                                <div class="hours-item">
+                                    <span>Monday</span>
+                                    <span>9:00am – 10:00pm</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span>Tuesday</span>
+                                    <span>9:00am – 10:00pm</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span>Wednesday</span>
+                                    <span>9:00am – 10:00pm</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span>Thursday</span>
+                                    <span>9:00am – 10:00pm</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span>Friday</span>
+                                    <span>9:00am – 10:00pm</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span>Saturday</span>
+                                    <span>9:00am – 6:00pm</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span>Sunday</span>
+                                    <span>9:00am – 12:00pm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Close mobile sidebar if open
+                const checkbox = document.getElementById('sidebar-toggle');
+                if (checkbox) {
+                    checkbox.checked = false;
+                }
+            });
+        });
+    </script>
+</body>
 </html>
