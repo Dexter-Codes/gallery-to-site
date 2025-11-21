@@ -316,7 +316,40 @@
         </section>
     </main>
     
+    <!-- Terms and Conditions Modal -->
+    <div id="terms-modal" class="terms-modal">
+        <div class="terms-modal-content">
+            <h2 class="terms-title">Terms and Conditions</h2>
+            <div class="terms-text">
+                <p><strong>Disclaimer:</strong> The content provided on this website is for informational purposes only and does not constitute legal advice. No lawyer-client relationship is created by accessing or using this website.</p>
+                <p><strong>No Attorney-Client Relationship:</strong> Your use of this website does not create an attorney-client relationship between you and Trexterity (TCK) Law. Confidential or time-sensitive information should not be sent through this website.</p>
+                <p><strong>Limitations on Liability:</strong> We make no representations or warranties regarding the accuracy, completeness, or timeliness of the information on this website. We shall not be liable for any damages arising from the use of this website or reliance on its content.</p>
+            </div>
+            <button id="accept-terms" class="terms-accept-btn">Accept and Continue</button>
+        </div>
+    </div>
+    
     <script>
+        // Terms and Conditions Modal Logic
+        (function() {
+            const modal = document.getElementById('terms-modal');
+            const acceptBtn = document.getElementById('accept-terms');
+            const hasAccepted = localStorage.getItem('termsAccepted');
+            
+            // Show modal if user hasn't accepted terms
+            if (!hasAccepted) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Handle accept button click
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('termsAccepted', 'true');
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        })();
+        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
