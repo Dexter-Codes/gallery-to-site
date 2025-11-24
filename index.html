@@ -358,6 +358,7 @@
             const submitBtn = document.getElementById('submit-btn');
             const formMessage = document.getElementById('form-message');
             const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzDzo4ruazRLGSNP2M7WnKwP4nijimgLjRfF8LsC1tH-h9qoyAbjt53dvWM0-zSKldy/exec';
+         //   'https://script.google.com/macros/s/AKfycbzDzo4ruazRLGSNP2M7WnKwP4nijimgLjRfF8LsC1tH-h9qoyAbjt53dvWM0-zSKldy/exec';
             
             form.addEventListener('submit', async function(e) {
                 e.preventDefault();
@@ -388,26 +389,28 @@
                 
                 try {
                     // Prepare form data as JSON object
-                    const formData = {
-                        name: name,
-                        email: email,
-                        phone: phone,
-                        message: message
-                    };
+                    const formData = new FormData();
+                    formData.append("entry.1120801868", e.target.name.value);
+                    formData.append("entry.774731993", e.target.email.value);
+                    formData.append("entry.133201602", e.target.phone.value);
+                    formData.append("entry.671091149", e.target.message.value);
                     
                     // Send to Google Sheets
-                    const response = await fetch(GOOGLE_SCRIPT_URL, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(formData)
+                    const response = await fetch(
+                    "https://docs.google.com/forms/d/e/1FAIpQLSfCyR7L8BSLKkCx6QSb4nwKmabY0tXQ-MZ558ZA_GDgSgRX0Q/formResponse",
+                    {
+                        method: "POST",
+                        mode: "no-cors",
+                        body: formData
                     });
-                    
-                    if (response.ok) {
-                        showMessage('Thank you! Your message has been sent successfully.', 'success');
-                        form.reset();
-                    } else {
-                        throw new Error('Failed to submit form');
-                    }
+                     showMessage('Thank you! Your message has been sent successfully.', 'success');
+                     form.reset();
+                  //  if (response.ok) {
+                  //      showMessage('Thank you! Your message has been sent successfully.', 'success');
+                  //      form.reset();
+                  //  } else {
+                  //      throw new Error('Failed to submit form');
+                  //  }
                 } catch (error) {
                     console.error('Form submission error:', error);
                     showMessage('Sorry, there was an error sending your message. Please try again.', 'error');
